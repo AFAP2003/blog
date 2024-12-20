@@ -1,29 +1,15 @@
 "use client"
 import { useEffect, useState } from "react";
-import { useRouter } from "next/router"; // To get the slug from the URL
 import { Author, CardRecommendation } from "../../components/cards";
 import { DetailBanner } from "../../components/carousel";
 import { Footer } from "../../components/footer";
-import { NewsNine } from "../../components/paragraphs";
 import { PopularNews } from "../../components/cards";
 import { Navbar } from "@/app/components/navbar";
 import contentfulClient from "@/contentful/contentfulClient"; // Your Contentful client
 import { IContentfulAsset, TypeBlogSkeleton } from "@/contentful/types/blog.types";
 import { useParams } from "next/navigation"
 
-const getArticleBySlug = async (slug: string) => {
-    try {
-        const data = await contentfulClient.getEntries<TypeBlogSkeleton>({
-            content_type: "blog",
-            "fields.slug": slug, // Filter by the slug field
-        });
 
-        return data.items[0]?.fields || null; // Return the article data
-    } catch (err) {
-        console.error(err);
-        return null;
-    }
-};
 
 export default function DetailPage() {
     const [article, setArticle] = useState<any>(null); // State to store article data

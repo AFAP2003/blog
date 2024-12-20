@@ -2,8 +2,10 @@
 
 import { useState,useRef,useEffect } from "react";
 
-
-export function Navbar({setSearchQuery}:any) {
+interface NavbarProps {
+    setSearchQuery: React.Dispatch<React.SetStateAction<string>>;
+  }
+export function Navbar({setSearchQuery}:NavbarProps) {
     const [isScrolled, setIsScrolled] = useState(false);
     const [isMenuOpen, setIsMenuOpen] = useState(false); // State for toggling the menu
     const searchInputRef = useRef(null); // Ref for the search input

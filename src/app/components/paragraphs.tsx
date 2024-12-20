@@ -2,7 +2,7 @@ type paragraphProps= {
     text:string;
 }
 
-const textOne:any = [
+const textOne:string[] = [
     "The Artemis mission will see four astronauts sent around the moon and back, before blasting off to land on the moon's surface a year later.",
     "But Bill Nelson, head of NASA, told a news conference the next Artemis mission has slipped to April 2026, with the subsequent astronaut landing mission, Artemis III, planned for the following year.",
     "The flight had already been delayed once, and was supposed to take off in September 2025.",
@@ -18,7 +18,7 @@ const textOne:any = [
 
 ]
 
-const textTwo:any = [
+const textTwo:string[] = [
     "A baseball star has reportedly agreed a 15-year $765m (£600m) deal with the New York Mets - one of the richest contracts in sport history.",
     "Juan Soto, 26, will join the Mets after spending one season with cross-town rival the New York Yankees.",
 "The deal was first reported by ESPN which said the agreement offers Soto an opt-out option after five years - and the contract could end up being worth over $800m (£626m).",
@@ -38,7 +38,7 @@ const textTwo:any = [
 "On this basis, Soto will have earned around $2,100 (£1,643) a minute during each game after 15 years."
 ]
 
-const textThree:any = [
+const textThree:string[] = [
     "It's taken a whopping 632 days to complete and generated billions of dollars as it travelled the globe, but now Taylor Swift's Eras tour is finally over.",
     "Kicking off in Glendale, Arizona, on 17 March last year and finishing in Vancouver, British Columbia on 8 December, it was perhaps bigger than even Swift could ever have dreamed.",
     "Made up of 149 shows, each running for around three hours, the elaborate performance featured multiple costume changes and a set list of more than 40 songs.",
@@ -61,7 +61,7 @@ const textThree:any = [
 
 ]
 
-const textFour:any = [
+const textFour:string[]= [
     "Donald Trump has vowed to end birthright citizenship, under which people born in the US are considered citizens. ",
     "The move would strip rights from those born in the country to undocumented parents - despite the protection being enshrined in the constitution.",
     "In a wide-ranging interview - which also touched on his plans for January 6 pardons and the Ukraine war - on NBC's Meet The Press, Sky News' US partner, he redoubled his campaign pledge to oversee mass deportation of illegal immigrants.",
@@ -87,7 +87,7 @@ const textFour:any = [
     'He said there "may be some exceptions" to his pardons "if somebody was radical, crazy," pointing to debunked claims that anti-Trump operatives infiltrated the crowd.'
 ]
 
-const textFive:any = [
+const textFive:string[]= [
     "Google has unveiled a computing chip capable of solving problems in minutes that would take one of today's fastest supercomputers 10 septillion years to complete.",
     "As well as being extremely fast, the experimental quantum chip, called Willow, can reduce errors exponentially. That's important because currently, quantum computers exponentially create errors, according to Google.",
 'Hartmut Neven, the founder of Google Quantum AI, said: "The more qubits we use in Willow, the more we reduce errors, and the more quantum the system becomes."',
@@ -104,7 +104,7 @@ const textFive:any = [
 `Google's next step, according to Mr Neven, is to find a "first 'useful, beyond-classical' computation" - a task that a classical computer couldn't do that is useful to real life.`
 ]
 
-const textSix:any = [
+const textSix:string[]= [
     "The owner of Poundland has revealed a £642m (€775m) hit to the UK discount retailer, citing several major headwinds including rising costs amid the budget burden facing businesses.",
     'Pepco said it was taking the non-cash impairment charge - a reduction on the perceived paper value of its assets - following "challenges" including poor performance and increased competition across its last financial year.',
     "Pepco said it was also taking account of a weaker outlook and higher costs facing Poundland, which employs around 15,000 staff.",
@@ -123,7 +123,7 @@ const textSix:any = [
 `
 ]
 
-const textSeven:any = [
+const textSeven:string[]= [
     "TikTok has lost an appeal against plans to ban the video-sharing app in the US.",
     "The social media platform had argued the proposal was a breach of the US First Amendment, which protects freedom of speech.",
     "TikTok pushed to overturn a law that could lead to its ban in a few months.",
@@ -145,7 +145,7 @@ const textSeven:any = [
     'TikTok dismissed the claims as "inaccurate and misleading".'
 ]
 
-const textEight:any = [
+const textEight:string[]= [
     "Sabrina Carpenter is the latest headline act to be confirmed for next summer's BST Hyde Park festival.",
     "The 25-year-old star - famous for hits including Espresso, Taste and Please, Please, Please - will perform next July in central London.",
     "The announcement comes amid reports her relationship with Irish actor Barry Keoghan has come to an end.",
@@ -160,7 +160,7 @@ const textEight:any = [
     "General sale for tickets begins at 10am on Wednesday 11 December."
 ]
 
-const textNine:any = [
+const textNine:string[]= [
     `The UK is "widely" underestimating the severity of the threat from cyberspace, the country's cyber security chief will warn. `,
     "It comes as the National Cyber Security Centre (NCSC) - a part of GCHQ - revealed there had been a three-fold increase in the most serious attacks compared with a year ago.",
     "Companies, organisations and other parties must immediately do more to bolster their resilience to the evolving risk posed by increasingly sophisticated cyber weapons, enhanced by artificial intelligence, that can be used by hostile states and criminals, the NCSC said in an annual review published on Tuesday.",

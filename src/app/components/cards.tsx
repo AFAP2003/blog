@@ -1,7 +1,5 @@
 "use client"
 
-import { link } from "fs";
-import { title } from "process";
 import contentfulClient from "@/contentful/contentfulClient";
 import { IContentfulAsset, TypeBlogSkeleton } from '@/contentful/types/blog.types';
 import { useState,useEffect } from "react";
@@ -12,6 +10,7 @@ type BlogEntry = {
     text: string;
     image: string;
     category: string;
+    slug:string
 };
 const getBlogContentful = async (): Promise<BlogEntry[]> =>{
     try{
@@ -34,7 +33,10 @@ const getBlogContentful = async (): Promise<BlogEntry[]> =>{
       return[]
     }
   }
-export function Card({searchQuery}:any) {
+  type CardProps = {
+    searchQuery:string
+  }
+export function Card({searchQuery}:CardProps) {
   
     const card = [
         {
@@ -123,8 +125,11 @@ export function Card({searchQuery}:any) {
         </div>
     );
 }
-
-export function CardBlog({searchQuery,selectedCategory}:any) {
+type CardBlogProps = {
+    searchQuery: string;
+    selectedCategory: string;
+};
+export function CardBlog({searchQuery,selectedCategory}:CardBlogProps) {
     const blog = getBlogContentful()
     const [blogs, setBlogs] = useState<BlogEntry[]>([]); // State to hold Contentful blog data
 
@@ -228,7 +233,7 @@ export function CardBlog({searchQuery,selectedCategory}:any) {
     
     return (
         <div className="flex flex-col gap-[30px] sm:grid sm:grid-cols-3 sm:gap-x-[50px] sm:gap-y-[50px]">
-            {filteredCards.map((item:any, index) => (
+            {filteredCards.map((item, index) => (
                 <div
                     key={index}
                     className="max-w-sm rounded overflow-hidden shadow-lg flex flex-col justify-between h-auto"

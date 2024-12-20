@@ -20,7 +20,7 @@ const getBlogContentful = async (): Promise<BlogEntry[]> =>{
 
       });
       return data.items.map((item) => ({
-        title: item.fields.title,
+        title: item.fields.title || '',
         text: item.fields.summary || "",
         image:  (item.fields.image as IContentfulAsset)?.fields.file.url || "",
         category: item.fields.category || "Uncategorized",

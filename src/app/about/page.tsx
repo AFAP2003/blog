@@ -31,7 +31,7 @@ export default function DetailPage() {
 
     useEffect(() => {
         fetchArticle()
-    }, [])
+    }, [fetchArticle])
     if (!article) {
         return <div>Loading...</div>; // Show loading state if article is not fetched
     }

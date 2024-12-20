@@ -1,9 +1,9 @@
 "use client"
 import { useEffect, useState } from "react";
 import { Author, CardRecommendation } from "../../components/cards";
-import { DetailBanner } from "../../components/carousel";
-import { Footer } from "../../components/footer";
-import { PopularNews } from "../../components/cards";
+import { DetailBanner } from "../components/carousel";
+import { Footer } from "../components/footer";
+import { PopularNews } from "../components/cards";
 import { Navbar } from "@/app/components/navbar";
 import contentfulClient from "@/contentful/contentfulClient"; // Your Contentful client
 import { IContentfulAsset, TypeBlogSkeleton } from "@/contentful/types/blog.types";

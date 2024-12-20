@@ -1,6 +1,5 @@
 "use client"
 
-import Image from "next/image";
 import { Navbar } from "./components/navbar";
 import { Carousel } from "./components/carousel";
 import {  ButtonCategoryHome, ButtonLoad } from "./components/buttons";

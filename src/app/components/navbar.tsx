@@ -1,5 +1,6 @@
 "use client"
 
+import Link from "next/link";
 import { useState,useRef,useEffect } from "react";
 
 interface NavbarProps {
@@ -63,9 +64,9 @@ export function Navbar({setSearchQuery}:NavbarProps) {
             )}
 
             <div className={`${isMenuOpen ? "relative right-[50px] sm:block" : "hidden"} sm:block`}>
-                <a href="/  ">
+                <Link href="/  ">
                 <img src="/portfolio logo.png" alt="" className="h-[50px]" />
-                </a>
+                </Link>
             </div>
 
             {/* Navigation Links */}
@@ -79,18 +80,18 @@ export function Navbar({setSearchQuery}:NavbarProps) {
                         isMenuOpen ? "text-black" : ""
                     }`}
                 >
-                    <a href="/" className="block lg:inline">
+                    <Link href="/" className="block lg:inline">
                         Home
-                    </a>
-                    <a href="/blog" className="block lg:inline">
+                    </Link>
+                    <Link href="/blog" className="block lg:inline">
                         Blog
-                    </a>
-                    <a href="/category" className="block lg:inline">
+                    </Link>
+                    <Link href="/category" className="block lg:inline">
                         Categories
-                    </a>
-                    <a href="/about" className="block lg:inline">
+                    </Link>
+                    <Link href="/about" className="block lg:inline">
                         About
-                    </a>
+                    </Link>
                 </div>
 
                 {/* Search Input in Navbar */}

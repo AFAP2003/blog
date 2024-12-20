@@ -1,6 +1,3 @@
-type paragraphProps= {
-    text:string;
-}
 
 const textOne:string[] = [
     "The Artemis mission will see four astronauts sent around the moon and back, before blasting off to land on the moon's surface a year later.",

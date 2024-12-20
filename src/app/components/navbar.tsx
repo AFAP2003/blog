@@ -63,7 +63,7 @@ export function Navbar({setSearchQuery}:NavbarProps) {
                 </div>
             )}
 
-            <div className={`${isMenuOpen ? "relative right-[50px] sm:block" : "hidden"} sm:block`}>
+            <div className={`${isMenuOpen ? "relative right-[120px] sm:block" : "hidden"} sm:block`}>
                 <Link href="/  ">
                 <img src="/blog-banner.png" alt="" className="h-[50px]" />
                 </Link>

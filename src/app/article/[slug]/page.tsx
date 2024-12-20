@@ -37,7 +37,6 @@ interface Article {
 
 export default function DetailPage() {
     const [article, setArticle] = useState<Article | null >(null); // Article | null to handle initial null state
-    const [searchQuery, setSearchQuery] = useState(''); // State to hold the search query
 
     const params = useParams<{ slug: string }>()
 
@@ -99,7 +98,7 @@ export default function DetailPage() {
 
     return (
         <>
-      <Navbar setSearchQuery={setSearchQuery}  />
+      <Navbar   />
       <DetailBanner
                 smWidth="sm:w-[1000px]"
                 image={`https:${(article?.image as IContentfulAsset).fields.file.url

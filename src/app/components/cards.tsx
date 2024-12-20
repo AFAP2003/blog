@@ -16,7 +16,7 @@ const getBlogContentful = async (): Promise<BlogEntry[]> =>{
     try{
       const data = await contentfulClient.getEntries<TypeBlogSkeleton>({
         content_type: 'blog', // Specify the content type ID for "portfolio"
-        order: 'sys.createdAt', // Oldest first
+        order: ['sys.createdAt'], // Oldest first
 
       });
       return data.items.map((item) => ({

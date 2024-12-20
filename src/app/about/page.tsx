@@ -9,11 +9,34 @@ import contentfulClient from "@/contentful/contentfulClient"; // Your Contentful
 import { IContentfulAsset, TypeBlogSkeleton } from "@/contentful/types/blog.types";
 import { useParams } from "next/navigation"
 
-
+interface Article {
+  title: string;
+  image: IContentfulAsset;
+  bodyone: string;
+  bodytwo: string;
+  bodythree: string;
+  bodyfour: string;
+  bodyfive: string;
+  bodysix: string;
+  bodyseven: string;
+  bodyeight: string;
+  bodynine: string;
+  bodyten: string;
+  bodyeleven: string;
+  bodytwelve: string;
+  bodythirteen: string;
+  bodyfourteen: string;
+  bodysixteen: string;
+  bodyseventeen: string;
+  bodyeighteen: string;
+  bodytwenty: string;
+  bodytwentyone: string;
+  bodytwentytwo: string;
+}
 
 export default function DetailPage() {
-    const [article, setArticle] = useState<any>(null); // State to store article data
-    const params = useParams<{ slug: string }>()
+  const [article, setArticle] = useState<Article | null>(null); // Article | null to handle initial null state
+  const params = useParams<{ slug: string }>()
 
     const fetchArticle = async () => {
         try {

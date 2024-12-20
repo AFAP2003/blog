@@ -16,7 +16,7 @@ export default function about() {
             <div className="mt-[30px] ml-[50px] sm:ml-0">
                 <span className="text-black font-bold text-[20px] sm:ml-[300px]">Blog Story</span>
                 <p className="w-[700px] sm:ml-[300px] max-w-[300px] sm:max-w-none">
-                    "All News in One Place" was founded with a single goal in mind: to provide readers with access to the latest and most accurate news from around the world, all in one convenient location. Inspired by the need for reliable information in a rapidly changing world, the blog was launched to bridge the gap between sensationalism and authenticity. Over time, we have evolved into a trusted platform, expanding our reach and embracing new technologies to deliver news faster and more effectively.
+                &quot;All News in One Place&quot; was founded with a single goal in mind: to provide readers with access to the latest and most accurate news from around the world, all in one convenient location. Inspired by the need for reliable information in a rapidly changing world, the blog was launched to bridge the gap between sensationalism and authenticity. Over time, we have evolved into a trusted platform, expanding our reach and embracing new technologies to deliver news faster and more effectively.
                 </p>
             </div>
 

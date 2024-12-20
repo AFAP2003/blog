@@ -130,17 +130,9 @@ type CardBlogProps = {
     selectedCategory: string;
 };
 export function CardBlog({searchQuery,selectedCategory}:CardBlogProps) {
-    const blog = getBlogContentful()
     const [blogs, setBlogs] = useState<BlogEntry[]>([]); // State to hold Contentful blog data
 
-    type filter={
-        image:string;
-        title:string;
-        text:string;
-        category:string;
-        link:string;
-       
-    }
+   
     // const card:filter[] = [
     //     {
     //         image: 'https://e3.365dm.com/24/12/1600x900/skynews-artemis-nasa_6768058.jpg?20241206091047',

@@ -4,13 +4,16 @@ import { Footer } from "../../components/footer";
 import { NewsSeven } from "../../components/paragraphs";
 import { PopularNews } from "../../components/cards";
 import { Navbar } from "@/app/components/navbar";
+import { useState } from "react";
 
 
 export default function detailPageSeven(){
+    const [searchQuery, setSearchQuery] = useState(''); // State to hold the search query
+
     return(
         <>
-            <Navbar/>
-         <DetailBanner smWidth="sm:w-[1000px]" image="https://e3.365dm.com/24/12/1600x900/skynews-tiktok-ban_6768568.jpg?20241206174937" title="TikTok faces US ban after losing court battle"/>
+      <Navbar setSearchQuery={setSearchQuery}  />
+      <DetailBanner smWidth="sm:w-[1000px]" image="https://e3.365dm.com/24/12/1600x900/skynews-tiktok-ban_6768568.jpg?20241206174937" title="TikTok faces US ban after losing court battle"/>
          <div className="flex sm:flex-row flex-col ">
          <NewsSeven/>
         <div className="flex flex-col">

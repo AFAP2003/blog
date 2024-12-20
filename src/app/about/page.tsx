@@ -58,11 +58,12 @@ export default function DetailPage() {
     if (!article) {
         return <div>Loading...</div>; // Show loading state if article is not fetched
     }
+    const [searchQuery, setSearchQuery] = useState(''); // State to hold the search query
 
     return (
         <>
-            <Navbar />
-            <DetailBanner
+      <Navbar setSearchQuery={setSearchQuery}  />
+      <DetailBanner
                 smWidth="sm:w-[1000px]"
                 image={`https:${(article?.image as IContentfulAsset).fields.file.url
                     }`} // Use the article image

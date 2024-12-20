@@ -1,16 +1,20 @@
+"use client"
 import { Author, CardRecommendation } from "../../components/cards";
 import { DetailBanner } from "../../components/carousel";
 import { Footer } from "../../components/footer";
 import { NewsEight, } from "../../components/paragraphs";
 import { PopularNews } from "../../components/cards";
 import { Navbar } from "@/app/components/navbar";
+import { useState } from "react";
 
 
 export default function detailPageEight(){
+    const [searchQuery, setSearchQuery] = useState<string>("");
+
     return(
         <>
-            <Navbar/>
-         <DetailBanner image="https://e3.365dm.com/24/06/1600x900/skynews-sabrina-carpenter-luton_6587523.jpg?20240621151526" title="Sabrina Carpenter to headline BST Hyde Park next July
+      <Navbar setSearchQuery={setSearchQuery} />
+      <DetailBanner image="https://e3.365dm.com/24/06/1600x900/skynews-sabrina-carpenter-luton_6587523.jpg?20240621151526" title="Sabrina Carpenter to headline BST Hyde Park next July
 "/>
          <div className="flex sm:flex-row flex-col ">
          <NewsEight/>

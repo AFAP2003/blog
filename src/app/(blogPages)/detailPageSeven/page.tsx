@@ -1,3 +1,4 @@
+"use client"
 import { Author, CardRecommendation } from "../../components/cards";
 import { DetailBanner } from "../../components/carousel";
 import { Footer } from "../../components/footer";

@@ -318,29 +318,29 @@ export function PopularNews(){
             </div> 
             <div className="flex flex-col">
                 <div className="w-full h-auto border-b ">
-                   <a href="">
+                   <Link href="/detailPageSeven">
                    <div className="flex">
                         <div className=""><img className="object-cover w-[101px] h-[80px]"src="https://e3.365dm.com/24/12/1600x900/skynews-tiktok-ban_6768565.jpg?20241206174824" alt="" /></div>
                         <div className="mt-3 ml-2"><span className="text-black">TikTok faces US ban after losing court battle</span></div>
                     </div>
-                   </a>
+                   </Link>
                 </div>
                 <div className="w-full h-auto border-b ">
-                   <a href="">
+                   <Link href="/detailPageEight">
                    <div className="flex">
                         <div className=""><img className="object-cover w-[125px] h-[80px]"src="https://e3.365dm.com/24/06/1600x900/skynews-sabrina-carpenter-luton_6587523.jpg?20240621151526" alt="" /></div>
                         <div className="mt-3 ml-2"><span className="text-black">Sabrina Carpenter to headline BST Hyde Park next July</span></div>
                     </div>
-                   </a>
+                   </Link>
                 </div>
                 <div className="w-full h-auto border-b ">
-                   <a href="">
+                   <Link href="detailPageNine">
                    <div className="flex">
                         <div className=""><img className="object-cover w-[112px] h-[80px]"src="https://e3.365dm.com/24/12/1600x900/skynews-donald-trump_6768852.jpg?20241207083653" alt="" /></div>
                         <div className="mt-3 ml-2"><span className="text-black">Donald Trump vows to end birthright citizenship
                         </span></div>
                     </div>
-                   </a>
+                   </Link>
                 </div>
                
             </div>
@@ -354,20 +354,25 @@ export function CardRecommendation() {
             image: 'https://e3.365dm.com/24/12/1600x900/skynews-tiktok-ban_6768565.jpg?20241206174824',
             title: 'TikTok faces US ban after losing court battle',
             text: 'TikTok has lost an appeal against plans to ban the video-sharing app in the US.',
-            category: 'Politics'
+            category: 'Politics',
+            link:'/detailPageSeven'
         },
         {
             image: 'https://e3.365dm.com/24/06/1600x900/skynews-sabrina-carpenter-luton_6587523.jpg?20240621151526',
             title: 'Sabrina Carpenter to headline BST Hyde Park next July',
             text: 'The 25-year-old star - famous for hits including Espresso, Taste and Please, Please, Please - will perform next July in central London',
-            category: 'Entertainments'
+            category: 'Entertainments',
+            link:'/detailPageEight'
+
 
         },
         {
             image: 'https://e3.365dm.com/24/07/1600x900/skynews-cyber-hack-attack-hacker_6639079.jpg?20240725172039',
             title: "The UK is 'widely' underestimating online threats from hostile states and criminals, cyber security chief warns",
             text: "It comes as the National Cyber Security Centre (NCSC) - a part of GCHQ - revealed there had been a three-fold increase in the most serious attacks compared with a year ago.",
-            category: 'Technology'
+            category: 'Technology',
+            link:'/detailPageNine'
+
         },
       
     ];
@@ -391,12 +396,12 @@ export function CardRecommendation() {
                         </p>
                     </div>
                     <div className="px-6 pt-0 pb-2 mt-auto"> {/* Highlighted change */}
-                        <a href="">
+                        <Link href={item.link}>
                             <div className="max-w-[78px]">
                                 <span className="text-black">Read More</span>
                                 <hr className="border-black border-t-[3px]" />
                             </div>
-                        </a>
+                        </Link>
                     </div>
                 </div>
             ))}

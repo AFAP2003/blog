@@ -9,19 +9,7 @@ import contentfulClient from "@/contentful/contentfulClient"; // Your Contentful
 import { IContentfulAsset, TypeBlogSkeleton } from "@/contentful/types/blog.types";
 import { useParams } from "next/navigation"
 
-const getArticleBySlug = async (slug: string) => {
-    try {
-        const data = await contentfulClient.getEntries<TypeBlogSkeleton>({
-            content_type: "blog",
-            "fields.slug": slug, // Filter by the slug field
-        });
 
-        return data.items[0]?.fields || null; // Return the article data
-    } catch (err) {
-        console.error(err);
-        return null;
-    }
-};
 
 export default function DetailPage() {
     const [article, setArticle] = useState<any>(null); // State to store article data

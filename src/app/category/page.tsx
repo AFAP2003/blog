@@ -1,3 +1,4 @@
+"use client"
 import { CardCategory } from "../components/cards"
 import { Carousel } from "../components/carousel"
 import { Navbar } from "../components/navbar"

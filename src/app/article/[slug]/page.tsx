@@ -37,6 +37,8 @@ interface Article {
 
 export default function DetailPage() {
     const [article, setArticle] = useState<Article | null >(null); // Article | null to handle initial null state
+    const [searchQuery, setSearchQuery] = useState(''); // State to hold the search query
+
     const params = useParams<{ slug: string }>()
 
     const fetchArticle = async () => {
@@ -94,7 +96,6 @@ export default function DetailPage() {
     if (!article) {
         return <div>Loading...</div>; // Show loading state if article is not fetched
     }
-    const [searchQuery, setSearchQuery] = useState(''); // State to hold the search query
 
     return (
         <>

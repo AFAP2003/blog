@@ -9,7 +9,7 @@ interface NavbarProps {
 export function Navbar({setSearchQuery}:NavbarProps) {
     const [isScrolled, setIsScrolled] = useState(false);
     const [isMenuOpen, setIsMenuOpen] = useState(false); // State for toggling the menu
-    const searchInputRef = useRef(null); // Ref for the search input
+    const searchInputRef = useRef<HTMLInputElement | null>(null); // Explicitly type the ref
 
     useEffect(() => {
         const handleScroll = () => {

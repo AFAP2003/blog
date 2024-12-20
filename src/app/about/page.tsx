@@ -1,6 +1,6 @@
 "use client"
 import { useEffect, useState } from "react";
-import { Author, CardRecommendation } from "../../components/cards";
+import { Author, CardRecommendation } from "../components/cards";
 import { DetailBanner } from "../components/carousel";
 import { Footer } from "../components/footer";
 import { PopularNews } from "../components/cards";

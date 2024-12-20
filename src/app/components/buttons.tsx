@@ -1,3 +1,6 @@
+import Link from "next/link";
+
+
 
 export function ButtonCategoryHome() {
     const categories = [
@@ -19,11 +22,11 @@ export function ButtonCategoryHome() {
             {/* Horizontal scroll container */}
             <div className="flex gap-4">
                 {categories.map((cat, index) => (
-                    <a href="" key={index}> {/* Add unique key */}
+                    <Link href="" key={index}> {/* Add unique key */}
                         <div className="px-4 py-2 rounded bg-black/80 text-white">
                             {cat}
                         </div>
-                    </a>
+                    </Link>
                 ))}
             </div>
         </div>

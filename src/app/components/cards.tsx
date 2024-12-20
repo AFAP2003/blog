@@ -113,12 +113,12 @@ export function Card({searchQuery}:CardProps) {
                         </p>
                     </div>
                     <div className="px-6 pt-4 pb-2 mt-auto"> {/* Highlighted change */}
-                        <a href={item.link}>
+                        <Link href={item.link}>
                             <div className="max-w-[78px]">
                                 <span className="text-black">Read More</span>
                                 <hr className="border-black border-t-[3px]" />
                             </div>
-                        </a>
+                        </Link>
                     </div>
                 </div>
             ))}

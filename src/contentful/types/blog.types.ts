@@ -16,7 +16,7 @@ export interface TypeBlogFields {
     bodyeight?: EntryFieldTypes.Symbol;
     bodynine?: EntryFieldTypes.Symbol;
     bodyten?: EntryFieldTypes.Symbol;
-    bodyevelen?: EntryFieldTypes.Symbol;
+    bodyeleven?: EntryFieldTypes.Symbol;
     bodytwelve?: EntryFieldTypes.Symbol;
     bodythirteen?: EntryFieldTypes.Symbol;
     bodyfourteen?: EntryFieldTypes.Symbol;

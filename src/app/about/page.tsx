@@ -29,6 +29,7 @@ interface Article {
   bodysixteen: string;
   bodyseventeen: string;
   bodyeighteen: string;
+  bodynineteen:string;
   bodytwenty: string;
   bodytwentyone: string;
   bodytwentytwo: string;
@@ -38,19 +39,53 @@ export default function DetailPage() {
   const [article, setArticle] = useState<Article | null>(null); // Article | null to handle initial null state
   const params = useParams<{ slug: string }>()
 
-    const fetchArticle = async () => {
-        try {
-            const data = await contentfulClient.getEntries<TypeBlogSkeleton>({
-                content_type: "blog",
-                limit: 1,
-                "fields.slug": params.slug
-            })
+  const fetchArticle = async () => {
+    try {
+        const data = await contentfulClient.getEntries<TypeBlogSkeleton>({
+            content_type: "blog",
+            limit: 1,
+            "fields.slug": params.slug
+        });
 
-            setArticle(data.items[0].fields)
-        } catch (err) {
-            console.log(err)
+        if (data.items.length > 0) {
+            const fields = data.items[0].fields;
+
+            // Map fields to Article structure
+            const mappedArticle: Article = {
+                title: fields.title || "",
+                image: fields.image as IContentfulAsset,
+                bodyone: fields.bodyone || "",
+                bodytwo: fields.bodytwo || "",
+                bodythree: fields.bodythree || "",
+                bodyfour: fields.bodyfour || "",
+                bodyfive: fields.bodyfive || "",
+                bodysix: fields.bodysix || "",
+                bodyseven: fields.bodyseven || "",
+                bodyeight: fields.bodyeight || "",
+                bodynine: fields.bodynine || "",
+                bodyten: fields.bodyten || "",
+                bodyeleven: fields.bodyeleven || "",
+                bodytwelve: fields.bodytwelve || "",
+                bodythirteen: fields.bodythirteen || "",
+                bodyfourteen: fields.bodyfourteen || "",
+                bodysixteen: fields.bodysixteen || "",
+                bodyseventeen: fields.bodyseventeen || "",
+                bodyeighteen: fields.bodyeightteen || "",
+                bodynineteen: fields.bodynineteen || "",
+                bodytwenty: fields.bodytwenty || "",
+                bodytwentyone: fields.bodytwentyone || "",
+                bodytwentytwo: fields.bodytwentyone || ""
+
+            };
+
+            setArticle(mappedArticle);
+        } else {
+            console.error("No articles found.");
         }
+    } catch (err) {
+        console.log(err);
     }
+};
 
     useEffect(() => {
         fetchArticle()

@@ -3,7 +3,7 @@
 import { useState,useRef,useEffect } from "react";
 
 interface NavbarProps {
-    setSearchQuery: React.Dispatch<React.SetStateAction<string>>;
+    setSearchQuery?: React.Dispatch<React.SetStateAction<string>>;
   }
 export function Navbar({setSearchQuery}:NavbarProps) {
     const [isScrolled, setIsScrolled] = useState(false);

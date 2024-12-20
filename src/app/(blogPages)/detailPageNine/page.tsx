@@ -5,15 +5,13 @@ import { Footer } from "../../components/footer";
 import { NewsNine,  } from "../../components/paragraphs";
 import { PopularNews } from "../../components/cards";
 import { Navbar } from "@/app/components/navbar";
-import { useState } from "react";
 
 
 export default function detailPageNine(){
-    const [searchQuery, setSearchQuery] = useState(''); // State to hold the search query
 
     return(
         <>
-      <Navbar setSearchQuery={setSearchQuery}  />
+      <Navbar  />
       <DetailBanner smWidth="sm:w-[1000px]" image="https://e3.365dm.com/24/07/1600x900/skynews-cyber-hack-attack-hacker_6639079.jpg?20240725172039" title="The UK is 'widely' underestimating online threats from hostile states and criminals, cyber security chief warns
 "/>
          <div className="flex sm:flex-row flex-col ">

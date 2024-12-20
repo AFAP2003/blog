@@ -10,7 +10,7 @@ export default function detailPageSix(){
     return(
         <>
             <Navbar/>
-         <DetailBanner image="https://e3.365dm.com/23/09/1600x900/skynews-poundland-shop_6283516.jpg?20230913142842" title="Poundland takes £642m hit on 'challenges' amid budget threat
+         <DetailBanner image="https://e3.365dm.com/23/09/1600x900/skynews-poundland-shop_6283516.jpg?20230913142842" title="Poundland takes £642m hit on &apos;challenges&apos; amid budget threat
 "/>
          <div className="flex sm:flex-row flex-col ">
          <NewsSix/>

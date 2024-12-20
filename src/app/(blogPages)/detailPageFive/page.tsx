@@ -10,7 +10,7 @@ export default function detailPageFive(){
     return(
         <>
             <Navbar/>
-         <DetailBanner smWidth="sm:w-[800px]" image="https://e3.365dm.com/24/12/1600x900/skynews-willow-quantum_6772127.jpg?20241210095502" title="Google unveils 'astonishing' quantum computing chip called Willow
+         <DetailBanner smWidth="sm:w-[800px]" image="https://e3.365dm.com/24/12/1600x900/skynews-willow-quantum_6772127.jpg?20241210095502" title="Google unveils &apos;astonishing&apos; quantum computing chip called Willow
 "/>
          <div className="flex sm:flex-row flex-col ">
          <NewsFive/>

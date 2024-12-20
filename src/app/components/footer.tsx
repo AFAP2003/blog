@@ -4,7 +4,7 @@ import { useState } from "react";
 
 
 export function Footer() {
-    const [expandedSection, setExpandedSection] = useState(null);
+    const [expandedSection, setExpandedSection] = useState<string | null>(null);
 
     const toggleSection = (section) => {
         setExpandedSection(expandedSection === section ? null : section);
